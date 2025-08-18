@@ -15,8 +15,8 @@ class AddNewAsset {
     await page.getByRole('button', { name: 'Add', exact: true }).click();
     await commonAction.checkToast(
       page,
-      "Asset created successfully!", // success toast text
-      /Unable to create Asset|error creating Asset/, // error regex/text
+      "Asset created successfully!",
+      /Unable to create Asset|error creating Asset/,
       "Add new Asset -> Fill form -> Click Add",
       resultTracker
     );
