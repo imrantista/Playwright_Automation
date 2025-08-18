@@ -24,7 +24,7 @@ test.describe("Assets Module Tests", () => {
     await expect(page.locator("text=Search")).toBeVisible();
     await page.getByRole("button", { name: "Add new" }).click();
     const addNewAsset = new AddNewAsset();
-    await addNewAsset.addAsset(page);
+    await addNewAsset.addAsset(page, resultTracker);
   });
   test.only("Delete Asset", async ({ page }) => {
     await page.goto(`${testData.link}products-and-assets?tab=Assets`);
